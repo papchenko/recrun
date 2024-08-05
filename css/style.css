@@ -1492,6 +1492,10 @@ body summary {
             justify-content: center;
   }
 
+  .item-capability__text {
+    padding: 0.625rem 0.9375rem;
+  }
+
   .news__container {
     padding: 0;
   }
