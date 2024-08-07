@@ -377,17 +377,33 @@ body summary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 2.5rem;
-  height: 2.5rem;
 }
 
 .desc-section__logo:not(:last-child) {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.desc-section__logo p {
+  position: relative;
+  font-size: 0.5rem;
+  opacity: 0.6;
+}
+
+.desc-section__logo p::before {
+  content: "";
+  border: 0.0625rem solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.25rem;
+  left: -0.125rem;
+  width: 16px;
+  height: 16px;
 }
 
 .desc-section__version {
   font-size: 0.75rem;
   margin-bottom: 0.625rem;
+  opacity: 0.2;
 }
 
 .desc-section__text {
@@ -1155,6 +1171,14 @@ body summary {
     padding-top: 5.625rem;
   }
 
+  .desc-section__logo {
+    width: 2.125rem;
+  }
+
+  .desc-section__logo {
+    height: 2.125rem;
+  }
+
   .hero-page {
     padding-top: 13.125rem;
   }
@@ -1275,6 +1299,14 @@ body summary {
 
   .footer {
     padding-top: 2.5rem;
+  }
+
+  .desc-section__logo {
+    width: 1.875rem;
+  }
+
+  .desc-section__logo {
+    height: 1.875rem;
   }
 
   .hero-page {
@@ -1422,17 +1454,17 @@ body summary {
 
   .menu__link {
     color: #fff;
-    font-size: 1.875rem;
+    font-size: 2.375rem;
   }
 
   .icon-menu {
     display: block;
     position: relative;
     width: 0.9375rem;
-    height: 0.75rem;
+    height: 0.875rem;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 1.25rem;
-            flex: 0 0 1.25rem;
+        -ms-flex: 0 0 1.875rem;
+            flex: 0 0 1.875rem;
     z-index: 5;
   }
 
@@ -1469,6 +1501,8 @@ body summary {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
+    background-color: #ff285b;
+    width: 80%;
   }
 
   .menu-open .icon-menu::after {
@@ -1476,6 +1510,8 @@ body summary {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+    background-color: #ff285b;
+    width: 80%;
   }
 
   .footer__content {
@@ -1664,6 +1700,30 @@ body summary {
 @supports not (padding-top: clamp( 2.5rem , 1.4010989011rem  +  5.4945054945vw , 5.625rem )) {
     .footer {
       padding-top: calc(2.5rem + 3.125 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (width: clamp( 1.875rem , 1.7870879121rem  +  0.4395604396vw , 2.125rem )) {
+    .desc-section__logo {
+      width: clamp( 1.875rem , 1.7870879121rem  +  0.4395604396vw , 2.125rem );
+    }
+}
+
+@supports not (width: clamp( 1.875rem , 1.7870879121rem  +  0.4395604396vw , 2.125rem )) {
+    .desc-section__logo {
+      width: calc(1.875rem + 0.25 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (height: clamp( 1.875rem , 1.7870879121rem  +  0.4395604396vw , 2.125rem )) {
+    .desc-section__logo {
+      height: clamp( 1.875rem , 1.7870879121rem  +  0.4395604396vw , 2.125rem );
+    }
+}
+
+@supports not (height: clamp( 1.875rem , 1.7870879121rem  +  0.4395604396vw , 2.125rem )) {
+    .desc-section__logo {
+      height: calc(1.875rem + 0.25 * (100vw - 20rem) / 56.875);
     }
 }
 
